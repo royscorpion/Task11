@@ -8,6 +8,8 @@ namespace StructEquation
 {
     public class LinEq
     {
+        double k;
+        double b;
         public double K { get; set; }
         public double B { get; set; }
 
