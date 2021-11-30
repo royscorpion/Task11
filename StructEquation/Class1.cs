@@ -10,8 +10,26 @@ namespace StructEquation
     {
         double k;
         double b;
-        public double K { get; set; }
+
         public double B { get; set; }
+        public double K
+        {
+            set
+            {
+                if (value != 0)
+                {
+                    k = value;
+                }
+                else
+                {
+                    Console.WriteLine("На ноль делить нельзя!");
+                }
+            }
+            get
+            {
+                return k;
+            }
+        }
 
         public LinEq(double k, double b)
         {
@@ -21,7 +39,7 @@ namespace StructEquation
 
         public void Root()
         {
-            Console.WriteLine("x = {0}", (-B) / K);
+            if (K != 0) Console.WriteLine("x = {0}", (-B) / K);
         }
     }
 }

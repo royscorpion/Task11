@@ -10,7 +10,7 @@ namespace Equation
     {
         static void Main(string[] args)
         {
-            LinEq linear = new LinEq { k = 0, b = 0 };
+            LinEq linear = new LinEq { k = 1, b = 0 };
             linear.Root();
         }
         struct LinEq
